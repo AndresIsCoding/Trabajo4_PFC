@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trabajo4_PFC.iml" filepath="$PROJECT_DIR$/.idea/modules/Trabajo4_PFC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Trabajo4_PFC-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Trabajo4_PFC-build.iml" />
     </modules>
   </component>
 </project>
