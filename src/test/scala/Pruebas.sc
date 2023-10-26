@@ -11,6 +11,8 @@ val s5 = Seq(3,1,6,2) //secuencia de prueba 2+ items no incrementales
 subindices(0,0)//caso1 i = n
 subindices(0,3)//caso2 i < n
 subindices(3,0)//caso3 (ilegal) i > n
+subindices(5,7)//caso4 i < n
+subindices(7,10)//caso5 i < n
 
 //casos de prueba subSecuenciaAsoc
 
@@ -41,20 +43,24 @@ subSecuenciasDe(s5)//caso 5 secuencia de tamaño 2+ noIncremental
 
 //casos de prueba incremental
 incremental(s1)//caso 1 secuencia de tamaño 0
-incremental(s4)//caso 2 secuencia de tamaño 2+ incremental
-incremental(s5)//caso 3 secuencia de tamaño 2+ noIncremental
+incremental(s2)//caso 2 secuencia de tamaño 1
+incremental(s3)//caso 3 secuencia de tamaño 2+
+incremental(s4)//caso 4 secuencia de tamaño 2+ incremental
+incremental(s5)//caso 5 secuencia de tamaño 2+ noIncremental
 
 //casos de prueba subSecuenciasInc
 subSecuenciasInc(s1)//caso 1 secuencia de tamaño 0
 subSecuenciasInc(s2)//caso 2 secuencia de tamaño 1
-subSecuenciasInc(s4)//caso 3 secuencia de tamaño 2+ incremental
-subSecuenciasInc(s5)//caso 4 secuencia de tamaño 2+ noIncremental
+subSecuenciasInc(s3)//caso 3 secuencia de tamaño 2+
+subSecuenciasInc(s4)//caso 4 secuencia de tamaño 2+ incremental
+subSecuenciasInc(s5)//caso 5 secuencia de tamaño 2+ noIncremental
 
 //casos de prueba subSecuenciaIncrementalMasLarga
 subsecuenciaIncrementalMasLarga(s1)//caso 1 secuencia de tamaño 0
 subsecuenciaIncrementalMasLarga(s2)//caso 2 secuencia de tamaño 1
-subsecuenciaIncrementalMasLarga(s4)//caso 3 secuencia de tamaño 2+ incremental
-subsecuenciaIncrementalMasLarga(s5)//caso 4 secuencia de tamaño 2+ noIncremental
+subsecuenciaIncrementalMasLarga(s2)//caso 3 secuencia de tamaño 2+
+subsecuenciaIncrementalMasLarga(s4)//caso 4 secuencia de tamaño 2+ incremental
+subsecuenciaIncrementalMasLarga(s5)//caso 5 secuencia de tamaño 2+ noIncremental
 
 //casos de prueba ssimIComenzandoEn
 //caso 1 prueba de la secuencia de 0 valores con indices inferiores, superiores y intermedios
