@@ -79,8 +79,8 @@ package object SubsecuenciaMasLarga
           subsecuencia <- subsecuencias
           if(incremental(subsecuencia))
         }yield subsecuencia
-      }
 
+      }
 
   def subsecuenciaIncrementalMasLarga(s: Secuencia): Subsecuencia =
   {
@@ -102,15 +102,53 @@ package object SubsecuenciaMasLarga
     secuencia_mayor(subsecuencias_incrementales, 0)
 
   }
-  /*
-        def ssimIComenzandoEn(i:Int , s: Secuencia): Subsecuencia =
+
+  def ssimlComenzandoEn(i:Int , s: Secuencia): Subsecuencia =
+  {
+    def mayores(s: Secuencia):Subsecuencia =
+      {
+        if (s.size < 1) s
+        else
         {
+          val lista_mayores = for
+          {
+            value <- s
+            if(value >= s.head)
+          }yield value
 
+          Seq(lista_mayores.head) ++ mayores(lista_mayores.tail)
         }
+      }
 
-        def subSecIncMasLargaV2(s: Secuencia): Subsecuencia =
-        {
+    if (s.size < 1) s
+    else
+    {
+      val lista = for
+      {
+        value <- s
+        if(s.indexOf(value) >= i)
+      }yield value
 
-        }
-         */
+      mayores(lista)
+
+    }
+  }
+
+  def subSecIncMasLargaV2(s: Secuencia): Subsecuencia =
+  {
+    def mas_largo(c:Int, s:Seq[Secuencia]): Subsecuencia =
+      {
+        val lista = for{value <- s if(value.size >= c)}yield value
+        if (lista.isEmpty) s.head
+        else mas_largo(c+1, lista)
+
+      }
+
+    if (s.size < 1) s
+    else
+    {
+      val subSecInc = for{value <- 0 until s.size}yield ssimlComenzandoEn(value, s)
+      mas_largo(0, subSecInc)
+    }
+  }
 }
